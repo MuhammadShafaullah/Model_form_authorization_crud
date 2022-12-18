@@ -1,0 +1,22 @@
+{% extends 'Crud/base.html' %} 
+
+{% block content %}
+
+<div class="class row">
+    <div class="class col-sm-4">
+        <h4 class="text-center alert alert-info">UPdate Student Information</h4>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {{form.as_p}}
+            <input type="submit" class="btn btn-info" value="Update" >
+            <a href="{% url 'home'%}" class=" btn btn-info">Back</a>
+
+        </form>
+
+    </div>
+</div>
+
+<h4>Update Student{{id}}</h4>
+
+{% endblock %}
